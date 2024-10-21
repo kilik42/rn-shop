@@ -1,12 +1,21 @@
 import { Tabs } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const TabsLayout = () => {  
   return (
-    <Tabs>
-        <Tabs.Screen  name="index" options ={{headerShown:true, title: 'Shop'}} />
-        <Tabs.Screen name = "categories"  options ={{headerShown:true, title: 'Categories'}} />
-        <Tabs.Screen name = "product" options ={{headerShown:true, title: 'Product'}} />
-        <Tabs.Screen name="orders" options ={{}} />
-    </Tabs>
+    <SafeAreaView>
+      <Tabs>
+        <Tabs.Screen
+            name="index"
+            options={{
+              headerShown: false,
+            }}
+         />
+          <Tabs.Screen name = 'orders'  options={{}}/>
+
+      </Tabs>
+    </SafeAreaView>
+
   );
 }
+
